@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BMi</string>
+    <string name="bmi_main_weight_kg">Weight [kg]</string>
+    <string name="bmi_main_height_m">Height [m]</string>
+    <string name="about_me_setting">About me</string>
+    <string name="change_jednostek">Change units</string>
+    <string name="bmi_to_next_activity">BMI</string>
+    <string name="bmi_count">Count</string>
+    <string name="bmi_index_text_activity">Your BMI index is</string>
+    <string name="linear_range_first">Детка, ну давай с тобою погуляем</string>
+    <string name="linear_range_second">Это лишь предлог</string>
+    <string name="linear_range_third">Мы оба это знаем</string>
+    <string name="linear_range_fourth">Я беру тебя за руку - держи крепко.</string>
+    <string name="show_history">History</string>
+</resources>
