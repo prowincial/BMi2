@@ -1,5 +1,6 @@
 package com.example.bmi
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.core.graphics.toColorInt
 import com.example.bmi.logic.BmiForInPo
 import com.example.bmi.logic.BmiForKgCm
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        loadData()
 
 
         }
@@ -52,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         else toastMe()
+        saveData()
     }
 
     private fun checkData(){
@@ -121,7 +126,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
         R.id.action_history -> {
-            val intent = Intent(this, HistoryData_activity::class.java)
+            val intent = Intent(this, HistoryData::class.java)
             intent.putExtra("wynik",bmiList)
             intent.putExtra("color",colorList)
 
@@ -204,6 +209,29 @@ class MainActivity : AppCompatActivity() {
         outState?.putCharSequence("savedTextWeight",textWieght)
         outState?.putCharSequence("savedTextHeight",textHieght)
 
+
+
+
+    }
+    fun saveData(){
+        val sp= getSharedPreferences("savedData", Context.MODE_PRIVATE)
+        val ed=sp!!.edit()
+        val gson= Gson()
+        val bmiString:String=gson.toJson(bmiList)
+        val colorString:String=gson.toJson(colorList)
+        ed.putString("sBmi",bmiString)
+        ed.putString("sColor",colorString)
+        ed.apply()
+    }
+    fun loadData(){
+        val sp= getSharedPreferences("savedData", Context.MODE_PRIVATE)
+        val gson= Gson()
+        val bmiString:String=sp.getString("sBmi",gson.toJson(bmiList))
+        val colorString:String=sp.getString("sColor",gson.toJson(colorList))
+        val type = object : TypeToken<ArrayList<String>>(){}.type
+        val type1 = object :TypeToken<ArrayList<Int>>(){}.type
+        bmiList=gson.fromJson(bmiString,type)
+        colorList=gson.fromJson(colorString,type1)
 
 
 

@@ -6,17 +6,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-
-
-class HistoryData_activity : AppCompatActivity() {
+class HistoryData : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_history_data_activity)
-
+        setContentView(R.layout.activity_history_data)
         checkData()
-
     }
+
     private fun checkData(){
         val names:ArrayList<String> =ArrayList()
         val wynik:ArrayList<String> = intent.getStringArrayListExtra("wynik")
@@ -40,7 +37,7 @@ class HistoryData_activity : AppCompatActivity() {
 
         }
 
-        val recyclerView:RecyclerView=findViewById(R.id.recyclerView)
+        val recyclerView: RecyclerView =findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = DataAdapter(names,wynik10,color10)
 
