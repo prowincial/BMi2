@@ -15,7 +15,10 @@ import com.example.bmi.logic.BmiForKgCm
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    public var flag:Boolean = true
+    var flag:Boolean = true
+    var bmiList:ArrayList<String> = ArrayList()
+    var colorList:ArrayList<Int> = ArrayList()
+
 
 
 
@@ -43,6 +46,8 @@ class MainActivity : AppCompatActivity() {
             }
             textCOlor(result)
             checkData()
+            bmiList.add(String.format("%.2f",result))
+            colorList.add(resultBMI.currentTextColor)
             resultBMI.text="$result"
 
         }
@@ -116,6 +121,12 @@ class MainActivity : AppCompatActivity() {
             true
         }
         R.id.action_history -> {
+            val intent = Intent(this, HistoryData_activity::class.java)
+            intent.putExtra("wynik",bmiList)
+            intent.putExtra("color",colorList)
+
+            startActivity(intent)
+
             true
 
         }

@@ -9,9 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".HistoryData_activity">
+        </activity>
         <activity android:name=".BMI_activity">
         </activity>
-
         <activity android:name=".About_me">
         </activity>
         <activity android:name=".MainActivity">

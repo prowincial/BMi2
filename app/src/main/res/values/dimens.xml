@@ -31,4 +31,7 @@
     <dimen name="print_weight_margin_right">8dp</dimen>
     <dimen name="bmi_activity_result_margin_top">18dp</dimen>
     <dimen name="calendar_margin_top">31dp</dimen>
+    <dimen name="general_spacing">9dp</dimen>
+    <dimen name="bmi_margin_elements">8dp</dimen>
+    <dimen name="bmi_size_text_medium">24sp</dimen>
 </resources>
