@@ -6,8 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+
+
+
+
+
+
 class DataAdapter(val users:ArrayList<String>, val wyniks:MutableList<String>,val colors:MutableList<Int>):
-    RecyclerView.Adapter<DataAdapter.ViewHolder>(){
+        RecyclerView.Adapter<DataAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.data_raws,parent,false)
         return ViewHolder(view)

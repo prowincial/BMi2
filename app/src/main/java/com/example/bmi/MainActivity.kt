@@ -9,13 +9,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.core.graphics.toColorInt
 import com.example.bmi.logic.BmiForInPo
 import com.example.bmi.logic.BmiForKgCm
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     var flag:Boolean = true

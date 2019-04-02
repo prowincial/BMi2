@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
+
 class HistoryData : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,9 +19,6 @@ class HistoryData : AppCompatActivity() {
         val names:ArrayList<String> =ArrayList()
         val wynik:ArrayList<String> = intent.getStringArrayListExtra("wynik")
         val colors:ArrayList<Int> = intent.getIntegerArrayListExtra("color")
-
-
-
         val num10:Int
 
         if (wynik.size < 10){
@@ -37,7 +35,7 @@ class HistoryData : AppCompatActivity() {
 
         }
 
-        val recyclerView: RecyclerView =findViewById(R.id.recyclerView)
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = DataAdapter(names,wynik10,color10)
 
