@@ -7,10 +7,10 @@
     <string name="bmi_to_next_activity">BMI</string>
     <string name="bmi_count">Count</string>
     <string name="bmi_index_text_activity">Your BMI index is</string>
-    <string name="linear_range_first">Детка, ну давай с тобою погуляем</string>
-    <string name="linear_range_second">Это лишь предлог</string>
-    <string name="linear_range_third">Мы оба это знаем</string>
-    <string name="linear_range_fourth">Я беру тебя за руку - держи крепко.</string>
+    <string name="linear_range_first">My name is Maksim</string>
+    <string name="linear_range_second">I am from Belarus</string>
+    <string name="linear_range_third">I am 19</string>
+    <string name="linear_range_fourth">Roses are red I love bread</string>
     <string name="show_history">History</string>
     <string name="dara_raws_num">N</string>
     <string name="bmi_history_wartosc">Wartosc</string>
